@@ -111,20 +111,20 @@ def main():
     for card in cards_number:
         skill_set = random.sample(final_list, 3)
 
-        context = {
-          'first_name': fake.first_name(),
-          'last_name': fake.last_name(),
-          'job': fake.job(),
-          'town': fake.city(),
-          'strength': random.randint(3, 18),
-          'agility': random.randint(3, 18),
-          'endurance': random.randint(3, 18),
-          'intelligence': random.randint(3, 18),
-          'luck': random.randint(3, 18),
-          'skill_1': skill_set[0],
-          'skill_2': skill_set[1],
-          'skill_3': skill_set[2],
-        }
+    context = {
+      'first_name': fake.first_name(),
+      'last_name': fake.last_name(),
+      'job': fake.job(),
+      'town': fake.city(),
+      'strength': random.randint(3, 18),
+      'agility': random.randint(3, 18),
+      'endurance': random.randint(3, 18),
+      'intelligence': random.randint(3, 18),
+      'luck': random.randint(3, 18),
+      'skill_1': skill_set[0],
+      'skill_2': skill_set[1],
+      'skill_3': skill_set[2],
+    }
 
         file_operations.render_template(
             'src/template.svg',
